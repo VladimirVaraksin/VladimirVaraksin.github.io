@@ -1,37 +1,131 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kursplan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        html {
+            margin: 0 auto;
+            max-width: 1600px;
+        }
+
+        table,
+        td,
+        th,
+        div {
             margin: 0;
             padding: 0;
+            font-family: "Open Sans";
         }
-        header {
-            background-color: #f4f4f4;
-            padding: 20px;
+
+        table,
+        td {
+            border: 1px solid rgb(200, 199, 199);
+            border-collapse: collapse;
             text-align: center;
-            position: relative;
+            vertical-align: middle;
+            width: 100%;
+            table-layout: fixed;
+            overflow-wrap: break-word;
+            font-weight: 550;
         }
-        header h1 {
-            margin: 0;
+
+        td {
+            padding: 15px;
+            height: 5em;
+            width: 50px;
+            transition: opacity 300ms;
         }
-        nav {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+
+        td:hover {
+            opacity: 70%;
         }
-        nav a {
-            margin-left: 15px;
-            text-decoration: none;
-            color: #333;
+
+        th {
+            height: 50px;
+            border: 1px solid black;
+        }
+
+        .square {
+            width: 1.3em;
+            height: 1.3em;
+            border-radius: 1000px;
+        }
+
+        .kraft {
+            background-color: rgb(168, 227, 222);
+        }
+
+        .ausdauer {
+            background-color: rgb(223, 177, 219);
+        }
+
+        .flexibilitaet {
+            background-color: rgb(242, 250, 127);
+        }
+
+        .legende {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .legende-zeile {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 4ch 20ch auto;
+        }
+
+        /* Media Queries für kleinere Geräte */
+        @media (max-width: 768px) {
+            td {
+                padding: 5px;
+                height: auto;
+                font-size: 0.6em;
+            }
+
+            th {
+                font-size: 0.7em;
+            }
+
+            .legende {
+                padding: 5px;
+                font-size: 0.6em;
+            }
+
+            .legende-zeile {
+                grid-template-columns: 4ch 15ch auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            td {
+                padding: 3px;
+                font-size: 0.4em;
+            }
+
+            th {
+                font-size: 0.5em;
+            }
+
+            .legende {
+                padding: 3px;
+                font-size: 0.5em;
+            }
+
+            .legende-zeile {
+                grid-template-columns: 3ch 12ch auto;
+            }
         }
     </style>
+
 </head>
+
 <body>
+
     <header>
         <h1>Kursplan</h1>
         <nav>
@@ -42,5 +136,87 @@
             <a href="kontakt.html">Kontakt</a>
         </nav>
     </header>
+    <!--Tabelle mit Kursen-->
+    <table>
+        <tr>
+            <th>Montag<br>27.05.</th>
+            <th>Dienstag<br>28.05.</th>
+            <th>Mittwoch<br>29.05.</th>
+            <th>Donnerstag<br>30.05.</th>
+            <th>Freitag<br>31.05.</th>
+            <th>Samstag<br>01.06.</th>
+            <th>Sonntag<br>02.06.</th>
+        </tr>
+        <tr>
+            <td class="kraft">10:15-10:55<br>Core Workout</td>
+            <td></td>
+            <td class="flexibilitaet">10:00-11:00<br>Bodyflex</td>
+            <td class="flexibilitaet">10:00-11:00<br>Stretching</td>
+            <td class="flexibilitaet">10:10-10:55<br>Yoga</td>
+            <td></td>
+            <td class="kraft">10:00-10:55<br>Bodypump</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="flexibilitaet">11:00-12:00<br>Yoga</td>
+            <td class="kraft">11:30-12:00<br>Rücken/Bauch</td>
+            <td></td>
+            <td class="ausdauer">11:00-11:55<br>Zumba</td>
+            <td class="kraft">11:20-11:50<br>Core Workout</td>
+            <td class="ausdauer">11:30-12:30<br>Bodyattack</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="ausdauer">17:00-18:00<br>Bodyjam</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="kraft">18:20-18:50<br>Grit</td>
+            <td class="kraft">18:15-18:45<br>Bodypump</td>
+            <td></td>
+            <td class="kraft">18:00-19:00<br>Tone/Attack</td>
+            <td class="ausdauer">18:30-19:20<br>Bodyjam</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="ausdauer">19:00-19:55<br>Bodycombat</td>
+            <td class="flexibilitaet">18:55-19:40<br>Yoga</td>
+            <td class="flexibilitaet">19:10-19:55<br>Bodybalance</td>
+            <td class="flexibilitaet">19:10-20:30<br>Stretching</td>
+            <td class="ausdauer">19:30-20:30<br>Bodycombat</td>
+            <td></td>
+            <td></td>
+    </table>
+
+    <!--Legende-->
+    <div class="legende">
+        <div class="legende-zeile">
+            <div class="square" style="background-color: rgb(168, 227, 222)"></div><span class="text"><b>Kraft</b></span>
+            <p><b>Krafttraining</b> beinhaltet Übungen, die deine Muskeln in Kombination arbeiten lassen.</p>
+        </div>
+
+        <div class="legende-zeile">
+            <div class="square" style="background-color: rgb(223, 177, 219)"></div><span class="text"><b>Ausdauer</b></span>
+            <p><b>Ausdauerkurse</b> sind gut für Herz und Stoffwechsel und sorgen für Gewichtsabnahme.</p>
+        </div>
+
+        <div class="legende-zeile">
+            <div class="square" style="background-color: rgb(242, 250, 127)"></div><span class="text"><b>Flexibilität</b></span>
+            <p><b>Flexibilitätstraining</b> macht deinen Körper stabiler und ermöglicht bessere Bewegungsfreiheit.</p>
+        </div>
+    </div>
+    <p style="font-size: 17px; "font-family: Open Sans">Gruppenkurse machen dich nicht nur fit und gesund, sondern bereiten auch Spaß und gute Laune. So wird Sport ganz einfach und schnell zur Gewohnheit!</p>
+    <hr>
+
+    <p style="font-size: 17px; "font-family: Open Sans">Melde dich bei uns an, um 3 Kurse <b>kostenlos</b> auszuprobieren. So kriegst du einen guten Einblick, ob dir unsere Auswahl gefällt.</p>
+
+
 </body>
+
 </html>
+
