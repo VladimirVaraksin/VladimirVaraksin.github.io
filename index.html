@@ -46,6 +46,29 @@
             text-decoration: none;
             color: #333;
         }
+        .photo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        .photo-row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .photo-frame {
+            border: 2px solid #333;
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -60,6 +83,13 @@
             <a href="kontakt.html">Kontakt</a>
         </nav>
     </header>
+    <div class="photo-container">
+        <div class="photo-row">
+            <div class="photo-frame">Foto</div>
+            <div class="photo-frame">Foto</div>
+        </div>
+        <div class="photo-frame">Foto</div>
+    </div>
     <footer>
         <span>Fitnessstudio | </span><a href="kontakt.html">Kontakt</a>
     </footer>
