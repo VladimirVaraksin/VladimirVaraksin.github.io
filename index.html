@@ -69,7 +69,13 @@
             font-weight: bold;
             color: #333;
         }
+        .button-container {
+            width: 200px; /* Gleiche Breite wie die photo-frame */
+            display: flex;
+            justify-content: center;
+        }
         button {
+            align-items: left;
             background-color: #fb5454;
             color: white;
             padding: 15px 30px;
@@ -103,7 +109,9 @@
             <div class="photo-frame">Foto</div>
             <div class="photo-frame">Foto</div>
         </div>
-        <button onclick="window.location.href='kursplan.html'">Kursplan</button>
+        <div class="button-container">
+            <button onclick="window.location.href='kursplan.html'">Kursplan</button>
+        </div>
         <div class="photo-frame">Foto</div>
         
         <h1>Das ist ein Entwurf unserer Webseite, die aktuelle Version finden Sie unter:</h1>
